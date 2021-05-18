@@ -6,3 +6,5 @@ For watching ducks attempting to make more ducks
 `watch-duck` contains web app for showing a graph of temperature and nest occupancy readings.
 
 This is all embedded in https://duckbo.at (if it is still up...)
+It looked something like this...
+![the nest graph](screenshot.png)
