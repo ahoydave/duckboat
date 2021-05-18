@@ -1,0 +1,17 @@
+{
+  "projectName": "watchduck",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "resources/public",
+      "BuildCommand": "npx shadow-cljs release main",
+      "StartCommand": "npx shadow-cljs server"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

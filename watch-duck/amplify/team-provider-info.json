@@ -1,0 +1,40 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-watchduck-prod-102848-authRole",
+            "UnauthRoleArn": "arn:aws:iam::169034053307:role/amplify-watchduck-prod-102848-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::169034053307:role/amplify-watchduck-prod-102848-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-watchduck-prod-102848-deployment",
+            "UnauthRoleName": "amplify-watchduck-prod-102848-unauthRole",
+            "StackName": "amplify-watchduck-prod-102848",
+            "StackId": "arn:aws:cloudformation:eu-west-2:169034053307:stack/amplify-watchduck-prod-102848/555622f0-9f5f-11eb-89a4-0280c5dcf9e0",
+            "AmplifyAppId": "dgh60caa0x3vh"
+        },
+        "categories": {
+            "storage": {
+                "SensorReadings": {
+                    "tableName": "SensorReadings",
+                    "region": "eu-west-2",
+                    "arn": "arn:aws:dynamodb:eu-west-2:169034053307:table/SensorReadings",
+                    "partitionKeyName": "deviceID",
+                    "partitionKeyType": "S",
+                    "sortKeyName": "timestamp",
+                    "sortKeyType": "S"
+                }
+            },
+            "function": {
+                "sensorreadings": {
+                    "deploymentBucketName": "amplify-watchduck-prod-102848-deployment",
+                    "s3Key": "amplify-builds/sensorreadings-7753366b6c66636d564e-build.zip"
+                }
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "dgh60caa0x3vh",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}

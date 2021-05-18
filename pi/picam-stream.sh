@@ -28,7 +28,7 @@ KEYFRAME=30
 
 # Set bitrate (Twitch recommends 3500000)
 # Can add this with -b $BITRATE for raspivid and -b:v $BITRATE for ffmpeg
-# BITRATE=3500000
+BITRATE=350000
 MAX_BIT_RATE=100000
 RECORD_BITRATE=500000
 
@@ -38,8 +38,14 @@ URL=rtmp://lhr04.contribute.live-video.net/app
 # Set stream key
 KEY=live_510705574_TL8RhAFhsRzn6SvnXHnvVrIjuFric5
 
+# The text overlay file
+TEXT_FILE=~/duckboat/text_overlay
+
+# -vf drawtext="textfile=$TEXT_FILE"
+# -i anullsrc 
 # Command
-raspivid -n -t 0 -w $WIDTH -h $HEIGHT -fps $FRAMERATE -b $RECORD_BITRATE -g $KEYFRAME -o - | ffmpeg -f lavfi -i anullsrc -c:a aac -r $FRAMERATE -i - -g $KEYFRAME -strict experimental -threads 4 -vcodec copy -map 0:a -map 1:v -maxrate $MAX_BIT_RATE -preset ultrafast -f flv "${URL}/${KEY}"
+# raspivid -vf -n -t 0 -w $WIDTH -h $HEIGHT -b $BITRATE -fps $FRAMERATE -b $RECORD_BITRATE -g $KEYFRAME -o - | ffmpeg -f lavfi -i anullsrc -c:a aac -r $FRAMERATE -i - -g $KEYFRAME -strict experimental -threads 4 -vcodec copy -map 0:a -map 1:v -preset ultrafast -b:v $BITRATE -f flv "${URL}/${KEY}"
+raspivid -vf -n -t 0 -w $WIDTH -h $HEIGHT -b $BITRATE -fps $FRAMERATE -b $RECORD_BITRATE -g $KEYFRAME -o - | ffmpeg -r $FRAMERATE -i - -g $KEYFRAME -strict experimental -threads 4 -codec:v copy -preset ultrafast -b:v $BITRATE -f flv "${URL}/${KEY}"
 
 # =================================================================
 # Full Documentation of Command Options

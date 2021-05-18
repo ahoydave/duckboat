@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/sensorreadings",
+            "lambdaFunction": "sensorreadings",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/sensorreadings"
+        }
+    ],
+    "resourceName": "sensorreadings",
+    "apiName": "sensorreadings",
+    "functionArns": [
+        {
+            "lambdaFunction": "sensorreadings"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-watchduck-prod-102848-authRole",
+        "unAuthRoleName": "amplify-watchduck-prod-102848-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "sensorreadings",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
