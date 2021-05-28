@@ -36,7 +36,7 @@ RECORD_BITRATE=500000
 URL=rtmp://lhr04.contribute.live-video.net/app
 
 # Set stream key
-KEY=live_510705574_TL8RhAFhsRzn6SvnXHnvVrIjuFric5
+KEY=<<insert your twitch stream key here>>
 
 # The text overlay file
 TEXT_FILE=~/duckboat/text_overlay
