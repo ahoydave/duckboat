@@ -14,3 +14,7 @@ This folder contains various scripts that run on a raspberry pi. And are used to
 `take_photo.sh` - take a photo of the nest
 
 `text_overlay` - part of an attempt to overlay text onto the video. The extra work re-encoding the video on the pi's processor was too slow for this to be viable (tried it on a pi zero)
+
+I really should have added a `requirements.txt` for the python deps, sorry. I'll try to remember to add that next time I dig that pi out.
+
+You also need to enable the pi camera using something like `raspi-config` - there are a million tutorials online
